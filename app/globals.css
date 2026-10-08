@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ========================================================
+     UNIVERSAL DESIGN SYSTEM - CORE BRAND PALETTES
+     Core Brand 500 Values:
+     - Blue 500:    #0099E5 (0, 153, 229)
+     - Danger 500:  #FF4C4C (255, 76, 76)
+     - Success 500: #34BF49 (52, 191, 73)
+     ======================================================== */
+
+  /* Primary Blue Palette */
+  --color-brand-50: #ebf7fe;
+  --color-brand-100: #cceeed;
+  --color-brand-200: #a3dffb;
+  --color-brand-300: #68caf8;
+  --color-brand-400: #2eb3f1;
+  --color-brand-500: #0099e5; /* CORE BRAND BLUE */
+  --color-brand-600: #007dc4;
+  --color-brand-700: #00629e;
+  --color-brand-800: #035384;
+  --color-brand-900: #08466e;
+  --color-brand-950: #052c47;
+
+  /* Danger Red Palette */
+  --color-danger-50: #fff1f1;
+  --color-danger-100: #ffe0e0;
+  --color-danger-200: #ffc7c7;
+  --color-danger-300: #ffa0a0;
+  --color-danger-400: #ff7575;
+  --color-danger-500: #ff4c4c; /* CORE BRAND RED */
+  --color-danger-600: #e52e2e;
+  --color-danger-700: #c11d1d;
+  --color-danger-800: #9f1b1b;
+  --color-danger-900: #831c1c;
+  --color-danger-950: #480909;
+
+  /* Success Green Palette */
+  --color-success-50: #effbf2;
+  --color-success-100: #daf5e1;
+  --color-success-200: #b7eac3;
+  --color-success-300: #86da99;
+  --color-success-400: #55c96d;
+  --color-success-500: #34bf49; /* CORE BRAND GREEN */
+  --color-success-600: #24a338;
+  --color-success-700: #1f812e;
+  --color-success-800: #1d6629;
+  --color-success-900: #195424;
+  --color-success-950: #082f10;
+
+  /* Warning Amber Palette (Harmonious Secondary Semantic) */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  --color-warning-950: #451a03;
+}
+
+:root {
+  /* Semantic Tokens - Light Theme */
+  --color-primary: #0099e5;
+  --color-primary-hover: #007dc4;
+  --color-primary-active: #00629e;
+  --color-primary-subtle: #ebf7fe;
+  --color-primary-border: #a3dffb;
+  --color-primary-text: #00629e;
+
+  --color-danger: #ff4c4c;
+  --color-danger-hover: #e52e2e;
+  --color-danger-active: #c11d1d;
+  --color-danger-subtle: #fff1f1;
+  --color-danger-border: #ffc7c7;
+  --color-danger-text: #c11d1d;
+
+  --color-success: #34bf49;
+  --color-success-hover: #24a338;
+  --color-success-active: #1f812e;
+  --color-success-subtle: #effbf2;
+  --color-success-border: #b7eac3;
+  --color-success-text: #1f812e;
+
+  --color-warning: #f59e0b;
+  --color-warning-subtle: #fffbeb;
+  --color-warning-border: #fde68a;
+  --color-warning-text: #b45309;
+
+  --color-bg-base: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
+}
+
+.dark {
+  /* Semantic Tokens - Dark Theme (Active only if .dark class is applied) */
+  --color-primary: #0099e5;
+  --color-primary-hover: #2eb3f1;
+  --color-primary-active: #68caf8;
+  --color-primary-subtle: rgba(0, 153, 229, 0.15);
+  --color-primary-border: rgba(0, 153, 229, 0.35);
+  --color-primary-text: #68caf8;
+
+  --color-danger: #ff4c4c;
+  --color-danger-hover: #ff7575;
+  --color-danger-active: #ffa0a0;
+  --color-danger-subtle: rgba(255, 76, 76, 0.15);
+  --color-danger-border: rgba(255, 76, 76, 0.35);
+  --color-danger-text: #ff7575;
+
+  --color-success: #34bf49;
+  --color-success-hover: #55c96d;
+  --color-success-active: #86da99;
+  --color-success-subtle: rgba(52, 191, 73, 0.15);
+  --color-success-border: rgba(52, 191, 73, 0.35);
+  --color-success-text: #55c96d;
+
+  --color-warning: #f59e0b;
+  --color-warning-subtle: rgba(245, 158, 11, 0.15);
+  --color-warning-border: rgba(245, 158, 11, 0.35);
+  --color-warning-text: #fbbf24;
+
+  --color-bg-base: #090d16;
+  --color-bg-surface: #111827;
+  --color-border: #1f293d;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #64748b;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
